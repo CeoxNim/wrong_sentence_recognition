@@ -1,0 +1,13 @@
+model_name: "bert-base-chinese"
+accelerator: ddp
+train_batch_size: 64
+val_batch_size: 64
+test_batch_size: 64
+n_splits: 5
+num_workers: 4
+gpus: 4
+seed: 41
+precision: 16
+epochs: 20
+lr: 0.00002
+total_steps: 73750  # 590000 * 2 / 5 / 64 * 20
